@@ -3,8 +3,8 @@
 ## Input data
 
 matrix N * N  
-add: N = 1000  
-multiply: N = 100  
+add: N = 10000  
+multiply: N = 1000  
 
 ## Successive results
 
@@ -13,22 +13,46 @@ multiply: T = ~24.42s
 
 ## Multithread results
 
-* ### 2 threads
+### Add
 
-  add: T = ~85s; S = 0.89; E = 0.445  
-  multiply: T = ~26.36s; S = 0.92; E = 0.46
+threads: 2  
+time: 4.77061s  
+S = 0.956107  
+E = 0.478054  
 
-* ### 4 threads
+threads: 4  
+time: 4.82403s  
+S = 0.945518  
+E = 0.23638  
 
-  add: T = ~101s; S = 0.75; E = 0.1875  
-  multiply: T = ~34.66s; S = 0.7; E = 0.175
+threads: 8  
+time: 6.39117s  
+S = 0.713673  
+E = 0.0892092  
 
-* ### 8 threads
+threads: 16  
+time: 6.31402s  
+S = 0.722394  
+E = 0.0451496  
 
-  add: T = ~127s; S = 0.59; E = 0.07375  
-  multiply: T = ~41.97s; S = 0.58; E = 0.0725
+### Multiply
 
-* ### 16 threads
+threads: 2  
+time: 9.1787s  
+S = 1.01878  
+E = 0.509388
 
-  add: T = ~171s; S = 0.44; E = 0.0275  
-  multiply: T = ~36.4s; S = 0.67; E = 0.041875
+threads: 4  
+time: 9.83328s  
+S = 0.950958  
+E = 0.237739
+
+threads: 8  
+time: 17.3434s  
+S = 0.539171  
+E = 0.0673963
+
+threads: 16  
+time: 17.5489s  
+S = 0.532855  
+E = 0.0333034
